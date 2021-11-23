@@ -11,8 +11,14 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+const head = function (arg) {
+  return arg[0];
+}
+
 // Test code
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("Rabbit", "Rabbit");
-assertEqual(100, 101);
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+assertEqual(head([]), "Hello");
+assertEqual(head(["Lighthouse", "Labs"]), "Hello");
+assertEqual(head([6,7]), 5);
+
