@@ -11,9 +11,9 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const head = function (arg) {
+const head = function(arg) {
   return arg[0];
-}
+};
 
 // Test code
 assertEqual(head([5,6,7]), 5);
