@@ -70,7 +70,7 @@ assertArraysEqual(middle([1,2,3,4,5,6,7,99]),[4]); //false
 assertArraysEqual(middle([1,2,3,4,5,6,7,99]),[4,5]); //true
 assertArraysEqual(middle([6,7]),[]); //true
 //assertArraysEqual(eqArrays(['apple','banana','peach'],['banana']), true);
-assertArraysEqual(middle([7, 8]),[7]); //should be faulse
+assertArraysEqual(middle([7, 8]),[7]); //should be false
 
 
 const test = ["hello", "world", "lighthouse"];
