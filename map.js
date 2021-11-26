@@ -38,7 +38,10 @@ const eqArrays = function(arr1, arr2) {
   
 };
 
+// Function implementation
+
 const words = ["ground", "control", "to", "major", "tom"];
+const numbers = [1, 2, 5, 7, 9];
 
 const map = function(array, callback) {
   //temporary code:
@@ -62,6 +65,7 @@ const map = function(array, callback) {
 // const results2 = map(words, word => word[0].toUpperCase());
 // const results3 = map(words, word => word.length);
 // const results4 = map(words, word => word.length < 6 ? word : undefined);
+// const results5 = map(numbers, number => number * number);
 
 //const results2 = map(words, word => lengthCheck(word));
 
@@ -70,6 +74,7 @@ const map = function(array, callback) {
 // console.log(results2);
 // console.log(results3);
 // console.log(results4);
+// console.log(results5);
 
 //Test code
 
@@ -77,3 +82,4 @@ assertArraysEqual(map(words, word => word[0]), ['g','c','t','m','t']);
 assertArraysEqual(map(words, word => word[0].toUpperCase()), ['G','C','T','M','T']);
 assertArraysEqual(map(words, word => word.length), [6, 7, 2, 5, 3]);
 assertArraysEqual(map(words, word => word.length < 6 ? word : undefined), [undefined, undefined, 'to', 'major', 'tom']);
+assertArraysEqual(map(numbers, number => number * number), [1, 4, 25, 49, 81]);
