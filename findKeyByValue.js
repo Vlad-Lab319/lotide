@@ -14,6 +14,7 @@ const assertEqual = function(actual, expected) {
 const findKeyByValue = function(object, value) {
   
   //console.log('object received: ', object);
+  
   let keys = Object.keys(object);
   //console.log(keys);
   
