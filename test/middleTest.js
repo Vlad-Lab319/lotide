@@ -1,14 +1,16 @@
 const middle = require('../middle');
-const assertArraysEqual = require('../assertArraysEqual');
+const assert = require('chai').assert;
 
-assertArraysEqual(middle([1,2,3,4,5,6,7]),[4]); //true
-assertArraysEqual(middle([1,2,3,4,5,6,7,99]),[4]); //false
-assertArraysEqual(middle([1,2,3,4,5,6,7,99]),[4,5]); //true
-assertArraysEqual(middle([6,7]),[]); //true
-assertArraysEqual(middle([7, 8]),[7]); //should be false
+describe('#middle returns one middle element of the array for odd arrays or two elements for even', () => {
+  it('should be [4] for [1, 2, 3, 4, 5, 6, 7]', () => {
+    assert.deepEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4]);
+  });
 
+  it('should be [4, 5] for [1, 2, 3, 4, 5, 6, 7, 99]', () => {
+    assert.deepEqual(middle([1, 2, 3, 4, 5, 6, 7, 99]), [4, 5]);
+  });
 
-// const test = ["hello", "world", "lighthouse"];
-// middle(test); // no need to capture return value for this test case
-// // Make sure the original array was not altered by the without function
-// assertArraysEqual(test, ["hello", "world", "lighthouse"]);
+  it('should be [] for [7, 99]', () => {
+    assert.deepEqual(middle([7, 99]), []);
+  });
+});
