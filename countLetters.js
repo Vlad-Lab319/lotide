@@ -1,15 +1,15 @@
-//Emojis
-const pass = String.fromCodePoint(0x1F600);
-const fale = String.fromCodePoint(0x1F47A);
+// //Emojis
+// const pass = String.fromCodePoint(0x1F600);
+// const fale = String.fromCodePoint(0x1F47A);
 
-// Function implementation
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(pass, pass, pass, `Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(fale, fale, fale, `Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// // Function implementation
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(pass, pass, pass, `Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(fale, fale, fale, `Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 const countLetters = function(str) {
   const results = {};
@@ -26,11 +26,12 @@ const countLetters = function(str) {
 };
 
 
-const sourceStr = "lighthouse in the house";
-const strToCountLetters = sourceStr.split(" ").join("");
+// const sourceStr = "lighthouse in the house";
+// const strToCountLetters = sourceStr.split(" ").join("");
 
-const counted = countLetters(strToCountLetters);
-console.log(counted);
+// const counted = countLetters(strToCountLetters);
+// console.log(counted);
 
 //Test code
 
+module.exports = countLetters;
