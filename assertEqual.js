@@ -33,7 +33,7 @@ const assertEqual = function(actual, expected) {
   }
   if (actual === expected) {
     console.log(pass, pass, pass, `Assertion Passed: ${actual} === ${expected}`);
-    return;
+    // return;
   } else if (actual.length !== expected.length) {
     console.log(fale, fale, fale, `Assertion Failed: ${actual} !== ${expected}`);
   } else {
@@ -50,5 +50,7 @@ const assertEqual = function(actual, expected) {
     console.log(pass, pass, pass, `Assertion Passed: ${actual} === ${expected}`);
   }
 };
+
+console.log(assertEqual(1, 2));
 
 module.exports = assertEqual;
