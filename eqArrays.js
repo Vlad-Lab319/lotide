@@ -46,7 +46,7 @@ const eqArrays = function(arr1, arr2) {
 // console.log(eqArrays(1, '1')); // => false
 
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+// console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
+// console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
 
 module.exports = eqArrays;
