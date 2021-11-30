@@ -1,30 +1,24 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
+describe("#tail returns remaining of the array after the first element", () => {
+  it("for [5, 6, 7, 8] it should be [6, 7, 8]", () => {
+    assert.deepEqual(tail([5, 6, 7, 8]), [6, 7, 8]);
+  });
 
-// Test code
-// assertEqual(tail([5,6,7,8]), [6,7,8]);
-// assertEqual(tail(["Hello", "Lighthouse", "Labs"]), "Hello");
-// assertEqual(tail([]), "Hello");
-// assertEqual(tail(["Lighthouse"]), "Hello");
-// assertEqual(tail([]),[]);
-// assertEqual(tail([5,6,7]), [9,7]);
+  it("for ['Hello', 'Lighthouse', 'Labs'] it should not be equal to ['Hello']", () => {
+    assert.notDeepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Hello"]);
+  });
 
+  it("for [] it should not be equal ['Labs']", () => {
+    assert.notDeepEqual(tail([]), ['Labs']);
+  });
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse"); 
-assertEqual(result[1], "Labs");
+  it("for ['Apple', 'Banana', 'Plum', 'Peach'] it should be ['Banana', 'Plum', 'Peach']", () => {
+    assert.deepEqual(tail(['Apple', 'Banana', 'Plum', 'Peach']), ['Banana', 'Plum', 'Peach']);
+  });
 
-const result2 = tail([5, 6, 7, 8]);
-assertEqual(result2.length, 3);
-assertEqual(result2[0], 6); 
-assertEqual(result2[1], 7);
-assertEqual(result2[2], 8);
-
-// // Test Case: Check the original array
-// const words = ["Yo Yo", "Lighthouse", "Labs"];
-// tail(words); // no need to capture the return value since we are not checking it
-// assertEqual(words.length, 3); // original array should still have 3 elements!
-// console.log(words);
-
+  it("for [5, [6, 7], 8] it should be [[6, 7], 8]", () => {
+    assert.deepEqual(tail([5, [6, 7], 8]), [[6, 7], 8]);
+  });
+});
